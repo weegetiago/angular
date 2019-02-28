@@ -1,0 +1,10 @@
+<div class="lista">
+  <label>Nome:</label>
+  <input type="text" [(ngModel)]="cliente.nome">
+  <label>Idade:</label>
+  <input type="text" [(ngModel)]="cliente.idade">
+  <button type="button" (click)="addCliente()">Add cliente </button>
+  <ul>
+    <li *ngFor="let item of clientes">{{item.nome}}-{{item.idade}}</li>
+  </ul>
+</div>
