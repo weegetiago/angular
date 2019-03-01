@@ -3,8 +3,11 @@
   <input type="text" [(ngModel)]="cliente.nome">
   <label>Idade:</label>
   <input type="text" [(ngModel)]="cliente.idade">
+  <label>Peso:</label>
+  <input type="text" [(ngModel)]="cliente.peso">
   <button type="button" (click)="addCliente()">Add cliente </button>
   <ul>
-    <li *ngFor="let item of clientes">{{item.nome}}-{{item.idade}}</li>
+    <li [style.color]="item.idade > 30 ? 'red':'green'" *ngFor="let item of clientes">
+      {{item.nome}} - {{item.idade}} - {{item.peso}}</li>
   </ul>
 </div>

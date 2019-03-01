@@ -11,11 +11,14 @@ export class ClientesComponent implements OnInit {
   clientes = [];
   cliente: Cliente = {
     nome:"" ,
-    idade: 0
+    idade: 0,
+    peso: 0,
   };
 
   addCliente(){
-    this.clientes.push(this.cliente)
+    //A linha abaixo cria um novo objeto sempre que ela é executada
+    let cli = Object.assign({},this.cliente);
+    this.clientes.push(cli); //lista os cadastros
   };
 
   constructor() { 
