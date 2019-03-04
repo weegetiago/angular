@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ClientesComponent } from './clientes/clientes.component';
+import { FormatCurrencyPipe } from './format-currency.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClientesComponent
+    ClientesComponent,
+    FormatCurrencyPipe
   ],
   imports: [
     BrowserModule,

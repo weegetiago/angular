@@ -13,6 +13,7 @@ export class ClientesComponent implements OnInit {
     nome:"" ,
     idade: 0,
     peso: 0,
+    valor: 0,
   };
 
   addCliente(){

@@ -5,9 +5,11 @@
   <input type="text" [(ngModel)]="cliente.idade">
   <label>Peso:</label>
   <input type="text" [(ngModel)]="cliente.peso">
+  <label>Valor:</label>
+  <input type="text" [(ngModel)]="cliente.valor">
   <button type="button" (click)="addCliente()">Add cliente </button>
   <ul>
     <li [style.color]="item.peso > 80 ? 'red':'green'" *ngFor="let item of clientes">
-      {{item.nome}} - {{item.idade}} - {{(item.peso > 80)? 'Gordo' : 'Ok'}}</li>
+      {{item.nome | uppercase}} - {{item.idade}} - {{item.peso}} - {{item.valor}} - {{item.peso > 80? 'Gordo' : 'Ok'}}</li>
   </ul>
 </div>
