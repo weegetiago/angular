@@ -14,6 +14,7 @@ export class ClientesComponent implements OnInit {
     idade: 0,
     peso: 0,
     valor: 0,
+    data:'2019-08-08'
   };
 
   addCliente(){

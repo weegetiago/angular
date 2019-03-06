@@ -3,4 +3,5 @@ export class Cliente{
     idade: number;
     peso: number;
     valor: number;
+    data: string;
 }
