@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { FormatCurrencyPipe } from './format-currency.pipe';
 import { FormatDatePipe } from './format-date.pipe';
+import { MeusClientesDirective } from './meus-clientes.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClientesComponent,
     FormatCurrencyPipe,
-    FormatDatePipe
+    FormatDatePipe,
+    MeusClientesDirective
   ],
   imports: [
     BrowserModule,
