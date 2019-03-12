@@ -7,6 +7,7 @@ import { ClientesComponent } from './clientes/clientes.component';
 import { FormatCurrencyPipe } from './format-currency.pipe';
 import { FormatDatePipe } from './format-date.pipe';
 import { MeusClientesDirective } from './meus-clientes.directive';
+import { NovoClienteComponent } from './novo-cliente/novo-cliente.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MeusClientesDirective } from './meus-clientes.directive';
     ClientesComponent,
     FormatCurrencyPipe,
     FormatDatePipe,
-    MeusClientesDirective
+    MeusClientesDirective,
+    NovoClienteComponent
   ],
   imports: [
     BrowserModule,

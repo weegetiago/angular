@@ -1,3 +1,4 @@
+<h1>Página de Clientes</h1>
 <div class="lista">
   <label>Nome:</label>
   <input type="text" [(ngModel)]="cliente.nome">
@@ -11,10 +12,9 @@
   <input type="text" [(ngModel)]="cliente.data">
   <button type="button" (click)="addCliente()">Add cliente </button>
   <ul>
-    <li [style.color]="item.peso > 80 ? 'red':'green'" *ngFor="let item of clientes" [appMeusClientes]="item">
+    <li *ngFor="let item of clientes" [appMeusClientes]="item.nome">
       {{item.nome | uppercase}} - {{item.idade}} - {{item.peso}} - {{item.valor | formatCurrency}} - {{item.data |
       formatDate}} - {{item.peso > 80? 'Gordo' : 'Ok'}}
     </li>
   </ul>
-  <p appMeusClientes></p>
 </div>
