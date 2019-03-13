@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Cliente } from '../cliente';
 
 @Component({
@@ -8,11 +8,10 @@ import { Cliente } from '../cliente';
 })
 export class ClientesComponent implements OnInit {
 
-  clientes = [];
+  @Input()
+  clientes;
 
-  constructor() { 
-
-  };
+  constructor() { };
 
   ngOnInit() {
   };

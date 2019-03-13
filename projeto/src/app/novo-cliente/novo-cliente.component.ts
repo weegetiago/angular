@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Cliente } from '../cliente';
 
 @Component({
@@ -8,7 +8,6 @@ import { Cliente } from '../cliente';
 })
 export class NovoClienteComponent implements OnInit {
 
-  clientes = [];
   cliente: Cliente = {
     nome:"" ,
     idade: 0,
@@ -17,9 +16,12 @@ export class NovoClienteComponent implements OnInit {
     data:'2019-08-08'
   }
 
+  @Input()
+  clientes;
+
   addCliente(){
     //A linha abaixo cria um novo objeto sempre que ela é executada
-    let cli = Object.assign({},this.cliente);
+    let cli = Object.assign({}, this.cliente);
     this.clientes.push(cli); //lista os cadastros
   };
 

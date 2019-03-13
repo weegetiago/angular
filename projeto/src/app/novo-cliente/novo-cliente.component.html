@@ -1,3 +1,16 @@
-<p>
-  novo-cliente works!
-</p>
+<div style="text-align:center">
+  <h1>Página de Clientes</h1>
+  <div class="lista">
+    <label>Nome:</label>
+    <input type="text" [(ngModel)]="cliente.nome">
+    <label>Idade:</label>
+    <input type="text" [(ngModel)]="cliente.idade">
+    <label>Peso:</label>
+    <input type="text" [(ngModel)]="cliente.peso">
+    <label>Valor:</label>
+    <input type="text" [(ngModel)]="cliente.valor">
+    <label>Data:</label>
+    <input type="text" [(ngModel)]="cliente.data">
+    <button type="button" (click)="addCliente()">Add cliente </button>
+  </div>
+</div>
