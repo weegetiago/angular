@@ -17,12 +17,12 @@ export class NovoClienteComponent implements OnInit {
   }
 
   @Input()
-  clientes;
+  novoClientes=[];
 
   addCliente(){
     //A linha abaixo cria um novo objeto sempre que ela é executada
     let cli = Object.assign({}, this.cliente);
-    this.clientes.push(cli); //lista os cadastros
+    this.novoClientes.push(cli); //lista os cadastros
   };
 
   constructor() { }

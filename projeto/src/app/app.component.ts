@@ -9,8 +9,6 @@ import { Cliente } from './cliente';
 export class AppComponent {
   title = 'Meu APP';
   clientes:Array<Cliente> = [
-    {
-      nome: 'Weege',peso:90, idade: 25, valor: 50, data: '2018-01-01'
-    }
+    
   ];
 }
