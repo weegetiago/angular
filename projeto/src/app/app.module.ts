@@ -8,6 +8,7 @@ import { FormatCurrencyPipe } from './format-currency.pipe';
 import { FormatDatePipe } from './format-date.pipe';
 import { MeusClientesDirective } from './meus-clientes.directive';
 import { NovoClienteComponent } from './novo-cliente/novo-cliente.component';
+import { ClienteService } from './cliente.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { NovoClienteComponent } from './novo-cliente/novo-cliente.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ClienteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cliente } from '../cliente';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-novo-cliente',
@@ -9,23 +10,24 @@ import { Cliente } from '../cliente';
 export class NovoClienteComponent implements OnInit {
 
   cliente: Cliente = {
-    nome:"" ,
+    nome: "",
     idade: 0,
     peso: 0,
     valor: 0,
-    data:'2019-08-08'
+    data: '2019-08-08'
   }
 
-  @Input()
-  novoClientes=[];
+  clientes:Array<Cliente>
 
-  addCliente(){
+  addCliente() {
     //A linha abaixo cria um novo objeto sempre que ela é executada
     let cli = Object.assign({}, this.cliente);
-    this.novoClientes.push(cli); //lista os cadastros
+    this.clientes.push(cli); //lista os cadastros
   };
 
-  constructor() { }
+  constructor(private clienteService: ClienteService) { 
+    this.clientes = this.clienteService.clientes
+  }
 
   ngOnInit() {
   }

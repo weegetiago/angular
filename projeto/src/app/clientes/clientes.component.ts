@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Cliente } from '../cliente';
+import { ClienteService } from '../cliente.service';
 
 @Component({
   selector: 'app-clientes',
@@ -8,10 +9,14 @@ import { Cliente } from '../cliente';
 })
 export class ClientesComponent implements OnInit {
 
-  @Input()
-  clientes;
+  clientes: Array<Cliente>
 
-  constructor() { };
+  constructor(private clienteService: ClienteService) {
+    this.clienteService.clientes.push();
+
+    this.clientes = this.clienteService.clientes;
+
+  };
 
   ngOnInit() {
   };
