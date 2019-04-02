@@ -1,11 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'; 
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CepComponent } from './cep/cep.component';
-import { CepService } from './cep.service';
+import { CepService } from './cep.service'; 
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CepService } from './cep.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [CepService],
   bootstrap: [AppComponent]

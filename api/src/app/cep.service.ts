@@ -7,4 +7,8 @@ import { Http } from '@angular/http';
 export class CepService {
 
   constructor(private http:Http) { }
+
+  buscar(cep:string){
+    this.http.get(`https://viacep.com.br/ws/${cep}/json/`);
+  }
 }
