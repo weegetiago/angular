@@ -1,14 +1,20 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CepService {
 
-  constructor(private http:Http) { }
+  constructor(private httpclient:HttpClient) { }
 
   buscar(cep:string){
-    this.http.get(`https://viacep.com.br/ws/${cep}/json/`);
+    this.httpclient.get(`https://viacep.com.br/ws/${cep}/json/`)
+    .subscribe((result:any) => {
+      console.log(result)
+    })
   }
 }
+
+
+//20921-060, 89012-375, e 89120-000
