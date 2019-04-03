@@ -4,6 +4,6 @@ export class Cep {
     numero: string;
     complemento: string;
     bairro: string;
-    cidade: string;
+    localidade: string;
     uf: string;
 }
