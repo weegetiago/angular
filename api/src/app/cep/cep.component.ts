@@ -15,9 +15,12 @@ export class CepComponent implements OnInit {
   ngOnInit() {
   }
 
-  buscar(){
+  buscar() {
     this.cepService.buscar(this.cep.cep)
-    .then((cep:Cep) => this.cep = cep)
+      .then((cep: Cep) => this.cep = cep)
+      .catch(() => {
+        alert('CEP inválido, verifique.');
+      })
   }
 
 }

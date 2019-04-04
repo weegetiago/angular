@@ -16,8 +16,10 @@ export class CepService {
         .subscribe((result: any) => {
           console.log(cep)
           resolve(this.recuperaDados(result))
-          
-        })
+        },
+          (error) => {
+            reject(error);
+          })
     })
   }
 
@@ -29,6 +31,7 @@ export class CepService {
     cep.bairro = cepRes.bairro;
     cep.localidade = cepRes.localidade;
     cep.uf = cepRes.uf;
+    cep.numero = '132';
     return cep;
   }
 
