@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Cep } from './cep';
+import { Cep } from './cep.model';
 import { reject } from 'q';
 
 @Injectable({
@@ -13,9 +13,8 @@ export class CepService {
   buscar(cep: string) {
     return new Promise((resolve, reject) => {
       this.httpclient.get(`https://viacep.com.br/ws/${cep}/json/`)
-        .subscribe((result: any) => {
-          console.log(cep)
-          resolve(this.recuperaDados(result))
+        .subscribe((resultado: any) => {
+          resolve(this.recuperaDados(resultado))
         },
           (error) => {
             reject(error);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CepService } from '../cep.service';
-import { Cep } from "../cep";
+import { Cep } from "../cep.model";
 
 @Component({
   selector: 'app-cep',
